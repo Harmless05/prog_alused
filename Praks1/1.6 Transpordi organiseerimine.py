@@ -1,16 +1,11 @@
-ühe_bussi_istekohad = int(input("Sisestage bussi kohtade arv: "))
 inimesi = int(input("Sisestage inimeste arv: "))
-busside_arv = int(input("Sisestage busside arv: "))
+ühe_bussi_istekohad = int(input("Sisestage bussi kohtade arv ühes bussis: "))
+busside_arv = inimesi // ühe_bussi_istekohad
 istekohad = ühe_bussi_istekohad * busside_arv
 mahajäänud_inimesed = inimesi % istekohad
-print(input("Mahajäänud inimesi on: " + str(mahajäänud_inimesed)))
+if mahajäänud_inimesed > 0:
+    busside_arv = busside_arv + 1
+print(input("Tuleb tellida juurde: " + str(busside_arv) + " bussi"))
 
-##mahajäänud = int(input("Sisestage mahajäänud inimeste arv: "))
-##inimeste arvu
-##kohtade aru ühes bussis
-##busside arvu
-##bussidesse mahtunud inimeste arvu
-##mahajäänud inimeste arvu
-#5 bussi
-#234 inimest
-## 36 istet
+#print(input("Busside arv: " + str(busside_arv)))
+#print(input("Mahajäänud inimesi on: " + str(mahajäänud_inimesed)))

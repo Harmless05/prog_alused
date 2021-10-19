@@ -5,7 +5,7 @@ istekohad = ühe_bussi_istekohad * busside_arv
 mahajäänud_inimesed = inimesi % istekohad
 if mahajäänud_inimesed > 0:
     busside_arv = busside_arv + 1
-print(input("Tuleb tellida juurde: " + str(busside_arv) + " bussi"))
+print(input("Tuleb tellida juurde " + str(busside_arv) + " bussi"))
 
 #print(input("Busside arv: " + str(busside_arv)))
 #print(input("Mahajäänud inimesi on: " + str(mahajäänud_inimesed)))

@@ -1,0 +1,1 @@
+täisarv = int(input("Sisestage täisarv: "))

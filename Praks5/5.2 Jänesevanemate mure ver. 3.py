@@ -1,0 +1,1 @@
+arv = int(input("Sisesta ringide arv: "))

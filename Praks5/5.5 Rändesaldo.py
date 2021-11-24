@@ -1,13 +1,31 @@
-fail = open("sisseranne.txt", encoding="UTF-8")
-fail2 = open("valjaranne.txt", encoding="UTF-8")
+sisseränne = open("sisseranne.txt", encoding="UTF-8")
+väljaränne = open("valjaranne.txt", encoding="UTF-8")
 
-arvud = []
-for rida in fail:
-    arvud.append(float(rida))
+sisse = []
+välja = []
+max = 0
 
-
-for element in arvud:
-    if element > 0: 
-        print(element)
+for rida in sisseränne:
+    sisse.append(int(rida))
+for rida1 in väljaränne:
+        välja.append(int(rida1))
         
-fail.close()
+#lahutaja
+for i in range(len(sisse)):
+    sisse[i] = sisse[i] - välja[i]
+    #sisse.append(sisse)
+    
+print(sisse)
+
+maxsisse = max(sisse)
+
+nrrida = sisse.index(sisse)
+
+if maxsisse >= 0:
+    print("Suurim positiivne rändesaldo oli " + str(nrrida) + ". aastal.")
+else:
+    print("Positiivse rändesaldoga aastaid ei ole.")
+
+#close
+sisseränne.close()
+väljaränne.close()

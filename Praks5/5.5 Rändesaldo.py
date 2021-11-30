@@ -3,29 +3,26 @@ väljaränne = open("valjaranne.txt", encoding="UTF-8")
 
 sisse = []
 välja = []
-max = 0
 
 for rida in sisseränne:
-    sisse.append(int(rida))
-for rida1 in väljaränne:
-        välja.append(int(rida1))
-        
-#lahutaja
-for i in range(len(sisse)):
-    sisse[i] = sisse[i] - välja[i]
-    #sisse.append(sisse)
-    
-print(sisse)
 
-maxsisse = max(sisse)
+    sisse.append(int(rida.strip()))
 
-nrrida = sisse.index(sisse)
+for rida in väljaränne:
 
-if maxsisse >= 0:
-    print("Suurim positiivne rändesaldo oli " + str(nrrida) + ". aastal.")
-else:
-    print("Positiivse rändesaldoga aastaid ei ole.")
+    välja.append(int(rida.strip()))
 
-#close
 sisseränne.close()
 väljaränne.close()
+
+vahe = []
+
+for i in range(len(sisse)):
+    vahe.append(sisse[i] - välja[i])
+
+print(vahe)
+
+if max(vahe) > 0:
+    print("Suurim positiivne rändesaldo oli " + str(vahe.index(max(vahe))+1) + ". aastal.")
+else:
+    print("Positiivse rändesaldoga aastaid ei ole.")
